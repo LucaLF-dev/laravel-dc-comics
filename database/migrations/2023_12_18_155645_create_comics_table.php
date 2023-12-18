@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('title',90);
             $table->text('description')->nullable();
-            $table->string('thumb');
-            $table->string('price');
-            $table->string('series',40);
+            $table->text('thumb', $precision = 3, $scale = 2);
+            $table->decimal('price');
+            $table->string('series');
             $table->date('sale_date');
-            $table->string('type',40);
+            $table->string('type');
             $table->timestamps();
         });
     }
