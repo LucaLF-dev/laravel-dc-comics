@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ComicController;
 use App\Models\Comic;
 use Illuminate\Support\Facades\Route;
 
@@ -25,11 +26,9 @@ Route::get('/', function () {
 Route::get('/comics', [ComicController::class, 'index'])
     ->name('comics.index');
 
+
 Route::get('/comics/create', [ComicController::class, 'create'])
-    ->name('comics.create');
+->name('comics.create');
 
-Route::get('/comics/{comic}', [ComicController::class, 'show'])
+    Route::get('/comics/{comic}', [ComicController::class, 'show'])
     ->name('comics.show');
-
-Route::post('/pastas', [PastaController::class, 'store'])
-    ->name('pastas.store');
