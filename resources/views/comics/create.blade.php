@@ -24,10 +24,17 @@
         <label for="series" class="form-label">Series</label>
         <input type="text" class="form-control" name="series" id="series" placeholder="Series">
       </div>
-
+      <div class="mb-3">
+        <label for="sale_date" class="form-label">Sale date</label>
+        <input type="date" class="form-control" name="sale_date" id="sale_date" placeholder="Sale date">
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <input type="text" class="form-control" name="price" id="price" placeholder="Price">
+      </div>
 
       <div class="mb-3">
-        <label for="description" class="form-label">Descrizione</label>
+        <label for="description" class="form-label">Description</label>
         <textarea class="form-control" name="description" id="description" rows="3" placeholder="Descrivi il comics"></textarea>
       </div>
 

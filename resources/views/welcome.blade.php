@@ -17,10 +17,9 @@
                 </h1>
 
                 <p class="col-md-12 fs-4">This a preset of Comics with Laravel - The PHP Framework For Web Artisans</p>
-               
+            </div>
         </div>
     </div>
-
 </div>
 @endsection
       
