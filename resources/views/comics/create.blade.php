@@ -4,7 +4,7 @@
 
 <section class="py-5">
   <div class="container">
-     <form action="" method="" > 
+     <form action="{{route('comics.store')}}" method="POST" > 
 
       @csrf
 
@@ -14,7 +14,7 @@
       </div>
       <div class="mb-3">
         <label for="type" class="form-label">Tipologia</label>
-        <input type="text" class="form-control" name="type" id="type" placeholder="Tipo di pasta">
+        <input type="text" class="form-control" name="type" id="type" placeholder="Tipo di comic">
       </div>
       <div class="mb-3">
         <label for="image" class="form-label">Image (url)</label>
@@ -22,13 +22,13 @@
       </div>
       <div class="mb-3">
         <label for="series" class="form-label">Series</label>
-        <input type="text" class="form-control" name="series" id="series" placeholder="series">
+        <input type="text" class="form-control" name="series" id="series" placeholder="Series">
       </div>
 
 
       <div class="mb-3">
         <label for="description" class="form-label">Descrizione</label>
-        <textarea class="form-control" name="description" id="description" rows="3" placeholder="Descrivi la pasta"></textarea>
+        <textarea class="form-control" name="description" id="description" rows="3" placeholder="Descrivi il comics"></textarea>
       </div>
 
       <div class="">
