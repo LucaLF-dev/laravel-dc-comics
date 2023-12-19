@@ -3,21 +3,29 @@
 @section('content')
     
   <section>
-    <div class="container">
+    <div class="container p-3">
+      <button type="button" class="btn btn-outline-primary btn-lg m-2">
+        <a class="text-decoration-none" href="{{route('comics.create')}}">Aggiungi Comic</a>
+    </button>
         <div class="row">
-            <div class="col-12">
-                <a href="{{route('comics.create')}}">Aggiungi Comic</a>
-            </div>
             @forelse ($comics as $comic)
             <div class="col-3"> 
+              <div class="card" style="width: 100px min-height:800px">
                 <figure>
-                   <a href="{{route('comics.show',$comic)}}"><img src="{{$comic->thumb}}" alt="" class="img-fluid img-thumbnail"  ></a> 
-                </figure>
+                  <a href="{{route('comics.show',$comic)}}"><img src="{{$comic->thumb}}" alt="" class="card-img-top min-height:300px"  ></a> 
+               </figure>
+                <div class="card-body">
+                  <h5 class="card-title">{{$comic->title}}</h5>
+                  <h6> {{$comic->price}} &euro;</h4>
+                  <h6>{{$comic->series}}</h5>
+                  <h6> {{$comic->type}}</h5>
+                  <a href="#" class="btn btn-primary">MODIFICA</a>
+                </div>
+              </div>
+               
         
-                <h3 class="">{{$comic->title}}</h3>
-                <h4> {{$comic->price}} &euro;</h4>
-                <h5>{{$comic->series}}</h5>
-                <h5> {{$comic->type}}</h5>
+                
+               
             </div>
           @empty
                 Nessun Comics trovato
