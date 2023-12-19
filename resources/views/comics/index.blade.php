@@ -12,14 +12,16 @@
             <div class="col-3"> 
               <div class="card" style="width: 100px min-height:800px">
                 <figure>
-                  <a href="{{route('comics.show',$comic)}}"><img src="{{$comic->thumb}}" alt="" class="card-img-top min-height:300px"  ></a> 
+                  <a href="{{route('comics.show',$comic)}}">
+                    <img src="{{$comic->thumb}}" alt="" class="card-img-top" style="min-height:600px"  >
+                  </a> 
                </figure>
                 <div class="card-body">
                   <h5 class="card-title">{{$comic->title}}</h5>
                   <h6> {{$comic->price}} &euro;</h4>
                   <h6>{{$comic->series}}</h5>
                   <h6> {{$comic->type}}</h5>
-                  <a href="#" class="btn btn-primary">MODIFICA</a>
+                  <a href="{{route('comics.edit', $comic)}}" class="btn btn-primary">MODIFICA</a>
                 </div>
               </div>
                
